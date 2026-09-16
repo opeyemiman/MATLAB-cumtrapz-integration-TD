@@ -1,8 +1,6 @@
 # MATLAB-cumtrapz-integration-TD
-Q = cumtrapz(Y) computes the approximate cumulative integral of Y via the trapezoidal method with unit spacing. The size of Y determines the dimension to integrate along:
+Q = cumtrapz(X,Y) integrates Y with respect to the coordinates or scalar spacing specified by X.
 
-If Y is a vector, then cumtrapz(Y) is the cumulative integral of Y.
+If X is a vector of coordinates, then length(X) must be equal to the size of the first dimension of Y whose size does not equal 1.
 
-If Y is a matrix, then cumtrapz(Y) is the cumulative integral over each column.
-
-If Y is a multidimensional array, then cumtrapz(Y) integrates over the first dimension whose size does not equal 1.
+If X is a scalar spacing, then cumtrapz(X,Y) is equivalent to X*cumtrapz(Y).
